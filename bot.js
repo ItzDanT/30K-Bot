@@ -2392,7 +2392,7 @@ omar.reply("`تم حذف جميع الرتب بنجاح`")
 
 
 client.on('message', omar => {
-var prefix = "-";
+var prefix = "<";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
 if (!omar.channel.guild) return;
 if (omar.author.id !== '371696327005831169') return omar.reply('**  **')
@@ -2404,8 +2404,6 @@ m.delete();
 }// omar jedol / Codes
 if(omar.content.split(' ')[0] == prefix + 'dr') { // delete all roles
 if (!omar.channel.guild) return;
-if (omar.author.id !== '371696327005831169') return omar.reply('**  **')
- if(!omar.author.id === '371696327005831169') return;
 if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**I Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
 omar.guild.roles.forEach(m => {
 m.delete();
